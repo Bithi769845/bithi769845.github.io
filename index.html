@@ -1,324 +1,395 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" data-font="serif">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MS BITHI - Curriculum Vitae | PhD Application</title>
-  <meta name="description" content="Academic Curriculum Vitae of Ms Bithi, AI Security Researcher specializing in Federated Learning and Cybersecurity.">
+  <title>MS BITHI - Personal Portfolio & Research CV</title>
+  <meta name="description" content="Personal Website & Research Portfolio of Ms Bithi, AI Security Researcher specializing in Federated Learning and Cybersecurity.">
   <meta name="author" content="MS BITHI">
-  
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
-  
-  <!-- FontAwesome Icons for Toolbar -->
+
+  <!-- FontAwesome & Academicons Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 </head>
 <body>
 
-  <!-- Floating Control Toolbar (Hidden in Print Mode) -->
-  <header class="toolbar">
-    <div class="toolbar-group">
-      <button id="print-btn" class="btn btn-primary" title="Export to PDF or Print CV">
-        <i class="fa-solid fa-file-pdf"></i> Export PDF / Print
-      </button>
-      <button id="theme-toggle" class="btn" title="Toggle Light/Dark Theme">
-        🌙 Dark Mode
-      </button>
-      <button id="font-toggle" class="btn" title="Switch Font Family">
-        📜 LaTeX Serif Font
-      </button>
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#about" class="nav-brand">
+        <i class="fa-solid fa-shield-halved"></i> MS <span>BITHI</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link active" data-tab="about">About</a></li>
+        <li><a href="#news" class="nav-link" data-tab="news">News</a></li>
+        <li><a href="#publications" class="nav-link" data-tab="publications">Publications</a></li>
+        <li><a href="#projects" class="nav-link" data-tab="projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-tab="experience">Experience</a></li>
+        <li><a href="#full-cv" class="nav-link" id="view-cv-tab">Full CV</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#" id="download-cv-btn" class="btn btn-primary">
+          <i class="fa-solid fa-file-arrow-down"></i> Download CV (PDF)
+        </a>
+        <button id="theme-toggle" class="btn btn-sm" title="Toggle Dark/Light Mode">
+          🌙 Dark Mode
+        </button>
+      </div>
     </div>
-    <div class="toolbar-group">
-      <input type="text" id="search-input" class="search-input" placeholder="🔍 Search CV (e.g. PyTorch)...">
-    </div>
-  </header>
+  </nav>
 
-  <!-- Main CV Paper Container (LaTeX A4 Preview) -->
-  <main class="cv-container" id="cv-content">
+  <!-- ==================== MAIN WRAPPER ==================== -->
+  <div class="wrapper">
 
-    <!-- ==================== HEADER ==================== -->
-    <header class="header">
-      <h1>MS BITHI</h1>
-      <div class="subtitle">AI Security Researcher &nbsp;|&nbsp; Federated Learning & Cybersecurity</div>
-      <div class="contact-links">
-        <a href="https://orcid.org/0009-0008-0719-7869" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i> ORCID</a>
-        <span class="dot-separator">•</span>
-        <a href="https://www.kaggle.com/msbithi" target="_blank" rel="noopener"><i class="fa-brands fa-kaggle"></i> Kaggle</a>
-        <span class="dot-separator">•</span>
-        <a href="https://www.researchgate.net/profile/Ms-Bithi?ev=hdr_xprf" target="_blank" rel="noopener"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
-        <span class="dot-separator">•</span>
-        <a href="https://scholar.google.com/citations?user=-YTxVAsAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
-        <span class="dot-separator">•</span>
-        <a href="mailto:bithimony01904@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-        <span class="dot-separator">•</span>
-        <a href="https://www.linkedin.com/in/ms-bithi-baa851219/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        <span class="dot-separator">•</span>
-        <span><i class="fa-solid fa-phone"></i> +880 1903643742</span>
-      </div>
-    </header>
-
-    <!-- ==================== PROFILE SUMMARY ==================== -->
-    <section id="summary">
-      <h2 class="section-title">Profile Summary</h2>
-      <p>
-        My research journey began with DDoS detection using ensemble machine learning during my undergraduate thesis, inspired by a professor's work in cybersecurity that first captivated me. This led me to specialize in <strong>Federated Learning</strong> for privacy-preserving security systems, where I have designed non-IID-robust aggregation algorithms for intrusion detection across UAV, IoT, and maritime radar systems, publishing two first-author papers in <strong>Scientific Reports (Nature Portfolio, Q1)</strong>. My research has since expanded into emerging directions within Federated Learning, including federated unlearning, feature heterogeneity, and healthcare applications, reflecting my broader interest in adapting Federated Learning and Cybersecurity to diverse real-world domains.
-      </p>
-    </section>
-
-    <!-- ==================== EDUCATION ==================== -->
-    <section id="education">
-      <h2 class="section-title">Education</h2>
-      <div class="entry-header">
-        <span class="entry-title">Prime University</span>
-        <span class="entry-date">Feb 2020 &ndash; May 2024</span>
-      </div>
-      <div class="entry-subtitle">Bachelor of Science in Computer Science & Engineering | Dhaka, Bangladesh</div>
-      <ul>
-        <li><strong>Academic Standing:</strong> CGPA: <strong>3.83 / 4.00</strong> (Merit Scholarships awarded from 7th semester onward).</li>
-        <li><strong>Undergraduate Thesis:</strong> <em>Ensemble ML approach for DDoS detection in SDN: Applied RFE feature selection</em>; published at <strong>IEEE ICEEICT 2024</strong>. DOI: <a href="https://doi.org/10.1109/ICEEICT62016.2024.10534483" target="_blank" class="doi-link">10.1109/ICEEICT62016.2024.10534483</a></li>
-      </ul>
-    </section>
-
-    <!-- ==================== RESEARCH INTERESTS ==================== -->
-    <section id="interests">
-      <h2 class="section-title">Research Interests</h2>
-      <p>
-        Cybersecurity & Network Intrusion Detection &bull; Federated & Distributed Learning &bull; Explainable AI (XAI) for Security &bull; LLM/VLM-based Security Automation &bull; Adversarial Machine Learning & Model Robustness &bull; Agentic AI for Cyber Defense
-      </p>
-    </section>
-
-    <!-- ==================== RESEARCH PUBLICATIONS ==================== -->
-    <section id="publications">
-      <h2 class="section-title">Research Publications</h2>
-      
-      <h3 style="font-size: 0.98rem; font-weight: 700; margin: 10px 0 6px 0; color: var(--color-primary);">Journal Papers:</h3>
-      
-      <div class="pub-item">
-        <span class="pub-tag">P1</span>
-        <strong>[Scientific Reports 2026]</strong> <u>Ms. Bithi</u>, T. Alsubait, A. Ibraheem, M. E. Masud, and M. A. Hossain, 
-        &ldquo;A federated learning-benchmarking framework for privacy-preserving UAV intrusion detection using adaptive aggregation algorithms,&rdquo; 
-        <em>Scientific Reports (Nature Portfolio, Q1)</em>, vol. 16, Article 21664, 2026. 
-        <br>
-        <strong>DOI:</strong> <a href="https://doi.org/10.1038/s41598-026-50865-9" target="_blank" class="doi-link">https://doi.org/10.1038/s41598-026-50865-9</a>
-        <button class="bibtex-btn" data-id="p1"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+    <!-- ==================== LEFT SIDEBAR (PROFILE CARD) ==================== -->
+    <aside class="sidebar">
+      <div class="profile-avatar-container">
+        <img src="logo\bithiimage.jpg" alt="MS Bithi Headshot" class="profile-avatar">
       </div>
 
-      <div class="pub-item">
-        <span class="pub-tag">P2</span>
-        <strong>[Scientific Reports 2026]</strong> <u>Ms. Bithi</u>, M. E. Masud, T. Alsubait, and M. A. Hossain, 
-        &ldquo;Non-IID-robust federated learning framework for maritime radar intrusion detection using dynamic weighting aggregation,&rdquo; 
-        <em>Scientific Reports (Nature Portfolio, Q1)</em>, vol. 16, Article 19842, 2026. 
-        <br>
-        <strong>DOI:</strong> <a href="https://doi.org/10.1038/s41598-026-48912-4" target="_blank" class="doi-link">https://doi.org/10.1038/s41598-026-48912-4</a>
-        <button class="bibtex-btn" data-id="p2"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+      <h1 class="profile-name">MS BITHI</h1>
+      <div class="profile-title">AI Security Researcher</div>
+      <div class="profile-bio-short">
+        Federated Learning &bull; Cybersecurity &bull; Privacy-Preserving Systems
       </div>
 
-      <h3 style="font-size: 0.98rem; font-weight: 700; margin: 12px 0 6px 0; color: var(--color-primary);">Conference Papers:</h3>
-
-      <div class="pub-item">
-        <span class="pub-tag">C1</span>
-        <strong>[IEEE ICEEICT 2024]</strong> <u>Ms. Bithi</u>, A. A. Mamun, and M. S. Rahman, 
-        &ldquo;Ensemble Machine Learning Approach for DDoS Detection in Software-Defined Networking using RFE Feature Selection,&rdquo; 
-        In <em>2024 IEEE 6th International Conference on Electrical Engineering and Information & Communication Technology (ICEEICT)</em>, Dhaka, Bangladesh, 2024, pp. 1-6. 
-        <br>
-        <strong>DOI:</strong> <a href="https://doi.org/10.1109/ICEEICT62016.2024.10534483" target="_blank" class="doi-link">https://doi.org/10.1109/ICEEICT62016.2024.10534483</a>
-        <button class="bibtex-btn" data-id="c1"><i class="fa-solid fa-quote-right"></i> BibTeX</button>
+      <div class="profile-affiliation">
+        <i class="fa-solid fa-briefcase"></i> Save the Children International
       </div>
-    </section>
 
-    <!-- ==================== CURRENT RESEARCH ==================== -->
-    <section id="current-research">
-      <h2 class="section-title">Current Research (Under Review / In Prep)</h2>
-      <ul>
+      <ul class="sidebar-links">
         <li>
-          <strong>GEM-FedMAR: Gradient-Explicit Memory Federated Learning for Non-IID Maritime Intrusion Detection</strong> &ndash; Target Journal: <em>IEEE Transactions on Information Forensics and Security</em> (Under Review).
+          <a href="https://scholar.google.com/citations?user=-YTxVAsAAAAJ&hl=en" target="_blank" rel="noopener">
+            <i class="ai ai-google-scholar"></i> Google Scholar
+          </a>
         </li>
         <li>
-          <strong>Cluster-Aware Federated Unlearning for Heterogeneous IoT Intrusion Detection Systems</strong> &ndash; Target Journal: <em>IEEE Internet of Things Journal</em> (In Preparation).
+          <a href="https://orcid.org/0009-0008-0719-7869" target="_blank" rel="noopener">
+            <i class="ai ai-orcid"></i> ORCID
+          </a>
+        </li>
+        <li>
+          <a href="https://www.researchgate.net/profile/Ms-Bithi?ev=hdr_xprf" target="_blank" rel="noopener">
+            <i class="ai ai-researchgate"></i> ResearchGate
+          </a>
+        </li>
+        <li>
+          <a href="https://www.kaggle.com/msbithi" target="_blank" rel="noopener">
+            <i class="fa-brands fa-kaggle"></i> Kaggle
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/ms-bithi-baa851219/" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="mailto:bithimony01904@gmail.com">
+            <i class="fa-solid fa-envelope"></i> bithimony01904@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="tel:+8801903643742">
+            <i class="fa-solid fa-phone"></i> +880 1903643742
+          </a>
         </li>
       </ul>
-    </section>
 
-    <!-- ==================== RESEARCH PROJECTS ==================== -->
-    <section id="projects">
-      <h2 class="section-title">Research Projects</h2>
-      <ul>
-        <li>
-          <strong>Voice Fingerprinting Attack & Network Traffic Analysis on Smart Speakers:</strong> Analyzed encrypted side-channel traffic bursts from Amazon Echo Dot smart speaker under ambient noise using Wireshark & Doc2Vec embeddings; evaluated attack resilience against neural classifiers.
-        </li>
-        <li>
-          <strong>Federated Intrusion Detection Benchmark Suite:</strong> Developed a custom benchmarking toolkit using Flower framework & PyTorch for non-IID client partition simulation across UNSW-NB15 & CICIDS2017 intrusion detection datasets.
-        </li>
-      </ul>
-    </section>
+      <button id="sidebar-cv-btn" class="btn btn-primary sidebar-download-btn">
+        <i class="fa-solid fa-download"></i> Download Full CV
+      </button>
+    </aside>
 
-    <!-- ==================== TECHNICAL SKILLS ==================== -->
-    <section id="skills">
-      <h2 class="section-title">Technical Skills</h2>
-      
-      <div class="skill-group">
-        <strong>Cybersecurity & Networks:</strong> 
-        <span class="skill-badge">Network Traffic Analysis</span>
-        <span class="skill-badge">Upstream/Downstream Burst</span>
-        <span class="skill-badge">Packet Timing</span>
-        <span class="skill-badge">IDS / Anomaly Detection</span>
-        <span class="skill-badge">SDN</span>
-        <span class="skill-badge">DDoS Defense</span>
-      </div>
+    <!-- ==================== MAIN CONTENT AREA ==================== -->
+    <main class="main-content">
 
-      <div class="skill-group">
-        <strong>Machine Learning:</strong> 
-        <span class="skill-badge">Ensemble Modeling</span>
-        <span class="skill-badge">XGBoost</span>
-        <span class="skill-badge">Random Forest</span>
-        <span class="skill-badge">SVM</span>
-        <span class="skill-badge">RFE Feature Selection</span>
-      </div>
-
-      <div class="skill-group">
-        <strong>Deep Learning:</strong> 
-        <span class="skill-badge">CNN</span>
-        <span class="skill-badge">RNN</span>
-        <span class="skill-badge">LSTM</span>
-        <span class="skill-badge">ANN</span>
-        <span class="skill-badge">Dual-Branch CNN</span>
-        <span class="skill-badge">Cross-Attention</span>
-        <span class="skill-badge">GEM</span>
-        <span class="skill-badge">SMOTE</span>
-      </div>
-
-      <div class="skill-group">
-        <strong>Generative AI & LLMs (In Progress):</strong> 
-        <span class="skill-badge">Transformers</span>
-        <span class="skill-badge">Self-Attention</span>
-        <span class="skill-badge">Positional Encoding</span>
-        <span class="skill-badge">LoRA / QLoRA Fine-Tuning</span>
-        <span class="skill-badge">RAG</span>
-        <span class="skill-badge">Agentic AI Systems</span>
-      </div>
-
-      <div class="skill-group">
-        <strong>Programming & Frameworks:</strong> 
-        <span class="skill-badge">Python</span>
-        <span class="skill-badge">C / C++</span>
-        <span class="skill-badge">SQL</span>
-        <span class="skill-badge">ASP.NET Core MVC</span>
-        <span class="skill-badge">Blazor</span>
-        <span class="skill-badge">PyTorch</span>
-        <span class="skill-badge">TensorFlow</span>
-        <span class="skill-badge">Keras</span>
-        <span class="skill-badge">Scikit-learn</span>
-        <span class="skill-badge">Flower</span>
-        <span class="skill-badge">TFF</span>
-      </div>
-
-      <div class="skill-group">
-        <strong>Tools & Data:</strong> 
-        <span class="skill-badge">Zotero</span>
-        <span class="skill-badge">Google Colab</span>
-        <span class="skill-badge">Doc2Vec</span>
-        <span class="skill-badge">Kaggle</span>
-        <span class="skill-badge">Git</span>
-        <span class="skill-badge">Visual Studio</span>
-        <span class="skill-badge">Anaconda</span>
-      </div>
-    </section>
-
-    <!-- ==================== PROFESSIONAL EXPERIENCE ==================== -->
-    <section id="experience">
-      <h2 class="section-title">Professional Experience</h2>
-      
-      <div class="career-card">
-        <div class="entry-header">
-          <span class="entry-title"><i class="fa-solid fa-building-user"></i> Save the Children International</span>
-          <span class="entry-date">Sep 2024 &ndash; Present</span>
+      <!-- SECTION: ABOUT ME -->
+      <section id="about" class="content-section">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-user-astronaut"></i> Biography & Research Focus</h2>
         </div>
-        <div class="entry-subtitle">International Non-Governmental Organization (NGO) &bull; Software Engineering Team</div>
-        
-        <!-- Beautiful Progression Step -->
-        <div class="role-progression">
-          <div class="role-step promoted">
-            <span class="role-step-title">Junior Software Engineer</span>
-            <span class="role-step-badge">Promoted Role &bull; Current</span>
-            <div style="font-size: 0.92rem; margin-top: 3px; color: var(--color-text-muted);">
-              Engineered enterprise applications using <strong>ASP.NET Core MVC</strong> and <strong>Blazor</strong>, leading frontend-backend architecture integration.
+        <p class="bio-text">
+          I am an <strong>AI Security Researcher</strong> specializing in privacy-preserving distributed systems, non-IID robust federated learning, and network intrusion detection. My research journey began with DDoS attack detection using ensemble machine learning during my undergraduate thesis at Prime University. 
+        </p>
+        <p class="bio-text">
+          Currently, my work focuses on designing novel aggregation algorithms for heterogeneous client environments across <strong>UAV, IoT, and maritime radar systems</strong>. I have authored two first-author research papers published in <strong>Scientific Reports (Nature Portfolio, Q1)</strong>. My broader research interests encompass federated unlearning, feature heterogeneity, explainable AI (XAI) for cyber defense, and agentic AI systems.
+        </p>
+      </section>
+
+      <!-- SECTION: RECENT NEWS -->
+      <section id="news" class="content-section">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-bullhorn"></i> Recent News & Highlights</h2>
+        </div>
+        <div class="news-feed">
+          <div class="news-item">
+            <span class="news-date">2026</span>
+            <span>Published 1st-Author Journal Paper on UAV Intrusion Detection in <strong>Scientific Reports (Nature Portfolio, Q1)</strong>.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2026</span>
+            <span>Published 1st-Author Journal Paper on Maritime Radar Intrusion Detection in <strong>Scientific Reports (Nature Portfolio, Q1)</strong>.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">Sep 2024</span>
+            <span>Promoted to <strong>Junior Software Engineer</strong> at <em>Save the Children International</em>.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">May 2024</span>
+            <span>Presented Conference Paper on DDoS Detection in SDN at <strong>IEEE ICEEICT 2024</strong>.</span>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2024</span>
+            <span>Awarded <strong>Champion Poster Presentation</strong> at CSE Fest 2024.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: PUBLICATIONS -->
+      <section id="publications" class="content-section">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-book-bookmark"></i> Research Publications</h2>
+        </div>
+
+        <!-- Publication 1 -->
+        <div class="pub-card">
+          <div class="pub-title">
+            A federated learning-benchmarking framework for privacy-preserving UAV intrusion detection using adaptive aggregation algorithms
+          </div>
+          <div class="pub-authors">
+            <u>Ms. Bithi</u>, T. Alsubait, A. Ibraheem, M. E. Masud, and M. A. Hossain
+          </div>
+          <div class="pub-venue">
+            Scientific Reports, vol. 16, Article 21664, 2026.
+          </div>
+          <div class="pub-badges">
+            <span class="badge badge-nature"><i class="fa-solid fa-leaf"></i> Nature Portfolio Q1</span>
+            <span class="badge badge-primary">First Author</span>
+            <a href="https://doi.org/10.1038/s41598-026-50865-9" target="_blank" class="btn btn-sm">
+              <i class="fa-solid fa-link"></i> DOI: 10.1038/s41598-026-50865-9
+            </a>
+            <button class="btn btn-sm bibtex-btn" data-id="p1">
+              <i class="fa-solid fa-quote-right"></i> BibTeX
+            </button>
+          </div>
+        </div>
+
+        <!-- Publication 2 -->
+        <div class="pub-card">
+          <div class="pub-title">
+            Non-IID-robust federated learning framework for maritime radar intrusion detection using dynamic weighting aggregation
+          </div>
+          <div class="pub-authors">
+            <u>Ms. Bithi</u>, M. E. Masud, T. Alsubait, and M. A. Hossain
+          </div>
+          <div class="pub-venue">
+            Scientific Reports, vol. 16, Article 19842, 2026.
+          </div>
+          <div class="pub-badges">
+            <span class="badge badge-nature"><i class="fa-solid fa-leaf"></i> Nature Portfolio Q1</span>
+            <span class="badge badge-primary">First Author</span>
+            <a href="https://doi.org/10.1038/s41598-026-48912-4" target="_blank" class="btn btn-sm">
+              <i class="fa-solid fa-link"></i> DOI: 10.1038/s41598-026-48912-4
+            </a>
+            <button class="btn btn-sm bibtex-btn" data-id="p2">
+              <i class="fa-solid fa-quote-right"></i> BibTeX
+            </button>
+          </div>
+        </div>
+
+        <!-- Publication 3 -->
+        <div class="pub-card">
+          <div class="pub-title">
+            Ensemble Machine Learning Approach for DDoS Detection in Software-Defined Networking using RFE Feature Selection
+          </div>
+          <div class="pub-authors">
+            <u>Ms. Bithi</u>, A. A. Mamun, and M. S. Rahman
+          </div>
+          <div class="pub-venue">
+            2024 IEEE 6th International Conference on Electrical Engineering and Information & Communication Technology (ICEEICT), Dhaka, Bangladesh, 2024, pp. 1-6.
+          </div>
+          <div class="pub-badges">
+            <span class="badge badge-ieee"><i class="fa-solid fa-microchip"></i> IEEE Conference</span>
+            <a href="https://doi.org/10.1109/ICEEICT62016.2024.10534483" target="_blank" class="btn btn-sm">
+              <i class="fa-solid fa-link"></i> DOI Link
+            </a>
+            <button class="btn btn-sm bibtex-btn" data-id="c1">
+              <i class="fa-solid fa-quote-right"></i> BibTeX
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- SECTION: PROJECTS -->
+      <section id="projects" class="content-section">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-diagram-project"></i> Key Research Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div>
+              <div class="project-title">Voice Fingerprinting & Side-Channel Attack Analysis</div>
+              <p class="project-desc">
+                Analyzed encrypted side-channel traffic bursts from Amazon Echo Dot smart speakers under ambient noise conditions using Wireshark and Doc2Vec embeddings to evaluate neural classifier attack resilience.
+              </p>
             </div>
+            <div class="project-tech">
+              <span class="badge badge-primary">Wireshark</span>
+              <span class="badge badge-primary">Doc2Vec</span>
+              <span class="badge badge-primary">PyTorch</span>
+              <span class="badge badge-primary">Traffic Analysis</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div>
+              <div class="project-title">Federated Intrusion Detection Benchmark Suite</div>
+              <p class="project-desc">
+                Developed a custom benchmarking toolkit using Flower framework & PyTorch for non-IID client partition simulation across UNSW-NB15 & CICIDS2017 intrusion detection datasets.
+              </p>
+            </div>
+            <div class="project-tech">
+              <span class="badge badge-primary">Flower</span>
+              <span class="badge badge-primary">TFF</span>
+              <span class="badge badge-primary">Non-IID Aggregation</span>
+              <span class="badge badge-primary">Python</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: EXPERIENCE -->
+      <section id="experience" class="content-section">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-company"><i class="fa-solid fa-building-flag"></i> Save the Children International</span>
+            <span class="exp-date">Sep 2024 &ndash; Present</span>
           </div>
           
-          <div class="role-step">
-            <span class="role-step-title">Trainee .NET Developer</span>
-            <span class="role-step-badge" style="background: #e2e8f0; color: #475569;">Initial Joining Role</span>
-            <div style="font-size: 0.92rem; margin-top: 3px; color: var(--color-text-muted);">
-              Joined as Trainee Developer; contributed to module design, database optimization, and agile software development lifecycle.
+          <div class="role-timeline">
+            <div class="role-item promoted">
+              <div style="font-weight: 700; font-size: 1rem; color: var(--color-primary);">
+                Junior Software Engineer <span class="badge badge-primary" style="background: #dcfce7; color: #15803d;">Promoted</span>
+              </div>
+              <p style="font-size: 0.92rem; color: var(--color-text-muted); margin-top: 4px;">
+                Developing enterprise applications using ASP.NET Core MVC and Blazor, leading software architecture and backend API development.
+              </p>
+            </div>
+
+            <div class="role-item">
+              <div style="font-weight: 700; font-size: 0.95rem;">
+                Trainee .NET Developer <span class="badge" style="background: #e2e8f0; color: #475569;">Initial Role</span>
+              </div>
+              <p style="font-size: 0.92rem; color: var(--color-text-muted); margin-top: 4px;">
+                Joined as Trainee Developer; contributed to core software module implementation and database optimizations.
+              </p>
             </div>
           </div>
         </div>
+      </section>
+
+      <!-- SECTION: TECHNICAL SKILLS -->
+      <section id="skills" class="content-section">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-laptop-code"></i> Technical Skills Matrix</h2>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div>
+            <strong>Cybersecurity & Networks:</strong>
+            <div style="margin-top: 6px;">
+              <span class="badge badge-primary">Network Traffic Analysis</span>
+              <span class="badge badge-primary">IDS / Anomaly Detection</span>
+              <span class="badge badge-primary">SDN</span>
+              <span class="badge badge-primary">DDoS Defense</span>
+              <span class="badge badge-primary">Packet Burst Timing</span>
+            </div>
+          </div>
+
+          <div>
+            <strong>Machine & Deep Learning:</strong>
+            <div style="margin-top: 6px;">
+              <span class="badge badge-primary">Federated Learning</span>
+              <span class="badge badge-primary">Ensemble Modeling</span>
+              <span class="badge badge-primary">XGBoost</span>
+              <span class="badge badge-primary">CNN</span>
+              <span class="badge badge-primary">LSTM</span>
+              <span class="badge badge-primary">GEM</span>
+              <span class="badge badge-primary">Cross-Attention</span>
+            </div>
+          </div>
+
+          <div>
+            <strong>Generative AI & LLMs (In Progress):</strong>
+            <div style="margin-top: 6px;">
+              <span class="badge badge-primary">Transformers</span>
+              <span class="badge badge-primary">Self-Attention</span>
+              <span class="badge badge-primary">LoRA / QLoRA</span>
+              <span class="badge badge-primary">RAG</span>
+              <span class="badge badge-primary">Agentic AI</span>
+            </div>
+          </div>
+
+          <div>
+            <strong>Programming & Frameworks:</strong>
+            <div style="margin-top: 6px;">
+              <span class="badge badge-primary">Python</span>
+              <span class="badge badge-primary">C/C++</span>
+              <span class="badge badge-primary">SQL</span>
+              <span class="badge badge-primary">PyTorch</span>
+              <span class="badge badge-primary">TensorFlow</span>
+              <span class="badge badge-primary">Flower</span>
+              <span class="badge badge-primary">ASP.NET Core</span>
+              <span class="badge badge-primary">Blazor</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FULL CV CONTAINER (TOGGLEABLE VIEW) -->
+      <div id="full-cv-container" class="cv-viewer-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 2px solid var(--color-primary); padding-bottom: 10px;">
+          <h2 style="color: var(--color-primary);"><i class="fa-solid fa-file-lines"></i> Full Curriculum Vitae</h2>
+          <button id="cv-print-trigger" class="btn btn-primary"><i class="fa-solid fa-print"></i> Print / Save PDF</button>
+        </div>
+        <iframe id="cv-iframe" src="about:blank" style="width: 100%; height: 800px; border: none; border-radius: 8px;"></iframe>
       </div>
-    </section>
 
-    <!-- ==================== PRESENTATIONS & ACHIEVEMENTS ==================== -->
-    <section id="achievements">
-      <h2 class="section-title">Presentations & Achievements</h2>
-      <ul>
-        <li><strong>IEEE Conference Paper Presentation &ndash; ICCCNT 2024:</strong> Presented research paper titled <em>Enhanced DDoS Detection in SDN</em>.</li>
-        <li><strong>Champion Poster Presentation &ndash; CSE Fest 2024:</strong> Awarded Champion for <em>DDoS Attack Detection using Feature Selection & ML</em>.</li>
-        <li><strong>Thesis Presentation Excellence:</strong> Recognized by department faculty panel for outstanding technical depth and clarity.</li>
-        <li><strong>HackerRank SQL Gold Badge:</strong> Successfully solved all advanced SQL database challenges.</li>
-        <li><strong>Merit Scholarships:</strong> Awarded tuition fee waivers for academic excellence from 7th semester onward.</li>
-      </ul>
-    </section>
+    </main>
+  </div>
 
-    <!-- ==================== LEADERSHIP & EXTRACURRICULAR ==================== -->
-    <section id="leadership">
-      <h2 class="section-title">Leadership & Extracurricular</h2>
-      <div class="entry-header">
-        <span class="entry-title">Prime University Computer Club</span>
-        <span class="entry-date">2022 &ndash; 2024</span>
-      </div>
-      <div class="entry-subtitle">General Secretary & Treasurer</div>
-      <ul>
-        <li>Organized annual CSE festivals & technical seminars (+20% participation increase year-over-year).</li>
-        <li>Conducted hands-on training sessions on competitive programming & problem-solving (mentored 50+ junior peers).</li>
-      </ul>
-      <ul>
-        <li><strong>Campus Ambassador &ndash; GUVI</strong> (2022 &ndash; 2023): Facilitated tech learning workshops on campus.</li>
-        <li><strong>Active Volunteer &ndash; National Events & Blood Donation Club:</strong> Coordinated logistics for national youth events.</li>
-      </ul>
-    </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 MS BITHI &bull; AI Security Researcher. Inspired by AcademicPages layout.</p>
+  </footer>
 
-    <!-- ==================== COURSES & LANGUAGE ==================== -->
-    <section id="courses-language">
-      <h2 class="section-title">Relevant Courses & Language</h2>
-      <ul>
-        <li><strong>Core Coursework:</strong> Cryptography & Network Security, Computer Networking, Artificial Intelligence, Machine Learning, Discrete Mathematics, Data Structures & Algorithms.</li>
-        <li><strong>Languages:</strong> <strong>English:</strong> Fluent (medium of instruction throughout undergraduate studies); <strong>IELTS:</strong> Scheduled for November 2026; <strong>Bengali:</strong> Native.</li>
-      </ul>
-    </section>
-
-    <!-- Simulated LaTeX Footer Page Indicator -->
-    <footer class="cv-footer">
-      <span>Curriculum Vitae &bull; MS BITHI</span>
-      <span>Page 1 of 1</span>
-    </footer>
-
-  </main>
-
-  <!-- BibTeX Citation Modal -->
-  <div class="modal-backdrop" id="bibtex-modal">
-    <div class="modal-content">
-      <button class="modal-close" id="modal-close">&times;</button>
-      <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 8px;">BibTeX Citation</h3>
+  <!-- BIBTEX MODAL -->
+  <div class="modal-overlay" id="bibtex-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modal-close">&times;</button>
+      <h3 style="color: var(--color-primary);"><i class="fa-solid fa-quote-right"></i> BibTeX Citation</h3>
       <pre id="bibtex-code"></pre>
-      <div style="text-align: right; margin-top: 14px;">
-        <button class="btn btn-primary" id="modal-copy"><i class="fa-solid fa-copy"></i> Copy BibTeX</button>
+      <div style="text-align: right;">
+        <button class="btn btn-primary" id="modal-copy-btn"><i class="fa-solid fa-copy"></i> Copy Citation</button>
       </div>
     </div>
   </div>
 
-  <!-- Toast Notification -->
-  <div class="toast" id="toast">Copied to clipboard!</div>
+  <!-- TOAST MESSAGE -->
+  <div class="toast-msg" id="toast">BibTeX Copied to Clipboard!</div>
 
-  <!-- JavaScript -->
+  <!-- SCRIPT -->
   <script src="script.js"></script>
 </body>
 </html>
