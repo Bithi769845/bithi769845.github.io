@@ -709,6 +709,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 4px;
+  width: 100%;
+}
+
+.contact-copy-item a {
+  font-size: 0.8rem !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
 }
 
 .btn-copy-icon {
@@ -719,6 +730,7 @@ body {
   padding: 4px 6px;
   border-radius: 4px;
   transition: var(--transition);
+  flex-shrink: 0;
 }
 
 .btn-copy-icon:hover {
