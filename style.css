@@ -13,11 +13,14 @@
   --bg-body: #f8fafc;
   --bg-card: #ffffff;
   --bg-sidebar: #ffffff;
-  --color-primary: #003366;           /* Deep Academic Navy */
+  --color-primary: #003366;
+  /* Deep Academic Navy */
   --color-primary-hover: #002244;
   --color-primary-light: #eff6ff;
-  --color-accent: #0284c7;            /* Electric Blue Accent */
-  --color-text: #1e293b;              /* Dark Slate Body Text */
+  --color-accent: #0284c7;
+  /* Electric Blue Accent */
+  --color-text: #1e293b;
+  /* Dark Slate Body Text */
   --color-text-muted: #64748b;
   --color-border: #e2e8f0;
   --color-badge-bg: #e0f2fe;
@@ -134,7 +137,8 @@ body {
   transition: var(--transition);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--color-primary);
   background: var(--color-primary-light);
 }
@@ -655,15 +659,24 @@ body {
 
 /* Print CSS */
 @media print {
-  .navbar, .sidebar, .news-feed, .modal-overlay, .toast-msg, .footer, .nav-actions {
+
+  .navbar,
+  .sidebar,
+  .news-feed,
+  .modal-overlay,
+  .toast-msg,
+  .footer,
+  .nav-actions {
     display: none !important;
   }
+
   .wrapper {
     display: block !important;
     max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
   }
+
   .cv-viewer-container {
     display: block !important;
     border: none !important;
@@ -677,9 +690,11 @@ body {
   .wrapper {
     grid-template-columns: 1fr;
   }
+
   .sidebar {
     position: static;
   }
+
   .nav-menu {
     display: none;
   }
@@ -813,7 +828,8 @@ body {
   transition: var(--transition);
 }
 
-.pub-filter-btn:hover, .pub-filter-btn.active {
+.pub-filter-btn:hover,
+.pub-filter-btn.active {
   background: var(--color-primary);
   color: #ffffff;
   border-color: var(--color-primary);
@@ -886,4 +902,3 @@ body {
   color: var(--color-text-muted);
   line-height: 1.5;
 }
-
