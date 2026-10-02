@@ -149,6 +149,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 5. Contact Copy to Clipboard Handling
+  const copyEmailBtn = document.getElementById('copy-email-btn');
+  const copyPhoneBtn = document.getElementById('copy-phone-btn');
+
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigator.clipboard.writeText('bithimony01904@gmail.com').then(() => {
+        showToast('Email address copied to clipboard!');
+      });
+    });
+  }
+
+  if (copyPhoneBtn) {
+    copyPhoneBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigator.clipboard.writeText('+8801903643742').then(() => {
+        showToast('Phone number copied to clipboard!');
+      });
+    });
+  }
+
+  // 6. Publication Category Filter Tabs
+  const filterBtns = document.querySelectorAll('.pub-filter-btn');
+  const pubCards = document.querySelectorAll('.pub-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      pubCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
   function showToast(msg) {
     if (!toast) return;
     toast.textContent = msg;

@@ -28,12 +28,13 @@
         <li><a href="#news" class="nav-link" data-tab="news">News</a></li>
         <li><a href="#publications" class="nav-link" data-tab="publications">Publications</a></li>
         <li><a href="#projects" class="nav-link" data-tab="projects">Projects</a></li>
+        <li><a href="#awards" class="nav-link" data-tab="awards">Awards</a></li>
         <li><a href="#experience" class="nav-link" data-tab="experience">Experience</a></li>
         <li><a href="#full-cv" class="nav-link" id="view-cv-tab">Full CV</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="#" id="download-cv-btn" class="btn btn-primary">
+        <a href="Bithi_CV.pdf" download="MS_BITHI_CV.pdf" class="btn btn-primary">
           <i class="fa-solid fa-file-arrow-down"></i> Download CV (PDF)
         </a>
         <button id="theme-toggle" class="btn btn-sm" title="Toggle Dark/Light Mode">
@@ -88,30 +89,56 @@
             <i class="fa-brands fa-linkedin"></i> LinkedIn
           </a>
         </li>
-        <li>
+        <li class="contact-copy-item">
           <a href="mailto:bithimony01904@gmail.com">
             <i class="fa-solid fa-envelope"></i> bithimony01904@gmail.com
           </a>
+          <button class="btn-copy-icon" id="copy-email-btn" title="Copy Email">
+            <i class="fa-regular fa-copy"></i>
+          </button>
         </li>
-        <li>
+        <li class="contact-copy-item">
           <a href="tel:+8801903643742">
             <i class="fa-solid fa-phone"></i> +880 1903643742
           </a>
+          <button class="btn-copy-icon" id="copy-phone-btn" title="Copy Phone Number">
+            <i class="fa-regular fa-copy"></i>
+          </button>
         </li>
       </ul>
 
-      <button id="sidebar-cv-btn" class="btn btn-primary sidebar-download-btn">
-        <i class="fa-solid fa-download"></i> Download Full CV
-      </button>
+      <a href="Bithi_CV.pdf" download="MS_BITHI_CV.pdf" class="btn btn-primary sidebar-download-btn">
+        <i class="fa-solid fa-file-arrow-down"></i> Download Full CV (PDF)
+      </a>
     </aside>
 
     <!-- ==================== MAIN CONTENT AREA ==================== -->
     <main class="main-content">
 
-      <!-- SECTION: ABOUT ME -->
+      <!-- SECTION: ABOUT ME & RESEARCH VISION -->
       <section id="about" class="content-section">
-        <div class="section-header">
-          <h2><i class="fa-solid fa-user-astronaut"></i> Biography & Research Focus</h2>
+        <!-- QUICK STATS HIGHLIGHT BAR -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">2</div>
+            <div class="stat-label"><i class="fa-solid fa-newspaper"></i> Q1 Nature Papers (1st Author)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1</div>
+            <div class="stat-label"><i class="fa-solid fa-microchip"></i> IEEE Conference Paper</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3.83</div>
+            <div class="stat-label"><i class="fa-solid fa-graduation-cap"></i> B.Sc. CGPA (Out of 4.00)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number"><i class="fa-solid fa-trophy"></i></div>
+            <div class="stat-label">Champion Poster Presentation</div>
+          </div>
+        </div>
+
+        <div class="section-header" style="margin-top: 24px;">
+          <h2><i class="fa-solid fa-user-astronaut"></i> Biography & Research Statement</h2>
         </div>
         <p class="bio-text">
           I am an <strong>AI Security Researcher</strong> specializing in privacy-preserving distributed systems, non-IID robust federated learning, and network intrusion detection. My research journey began with DDoS attack detection using ensemble machine learning during my undergraduate thesis at Prime University. 
@@ -119,6 +146,25 @@
         <p class="bio-text">
           Currently, my work focuses on designing novel aggregation algorithms for heterogeneous client environments across <strong>UAV, IoT, and maritime radar systems</strong>. I have authored two first-author research papers published in <strong>Scientific Reports (Nature Portfolio, Q1)</strong>. My broader research interests encompass federated unlearning, feature heterogeneity, explainable AI (XAI) for cyber defense, and agentic AI systems.
         </p>
+
+        <!-- CORE RESEARCH DIRECTIONS CARDS -->
+        <div class="research-directions-grid">
+          <div class="research-dir-card">
+            <div class="research-dir-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="research-dir-title">Federated Learning & Non-IID Aggregation</div>
+            <div class="research-dir-desc">Designing robust, privacy-preserving dynamic weighting algorithms under severe client data heterogeneity.</div>
+          </div>
+          <div class="research-dir-card">
+            <div class="research-dir-icon"><i class="fa-solid fa-plane-lock"></i></div>
+            <div class="research-dir-title">Autonomous Edge & Maritime Intrusion Detection</div>
+            <div class="research-dir-desc">Developing real-time benchmarking frameworks for UAV swarm security and maritime radar intrusion defense.</div>
+          </div>
+          <div class="research-dir-card">
+            <div class="research-dir-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="research-dir-title">Explainable AI & Cyber Defense</div>
+            <div class="research-dir-desc">Leveraging ensemble ML, RFE feature selection, and side-channel traffic analysis for smart IoT resilience.</div>
+          </div>
+        </div>
       </section>
 
       <!-- SECTION: RECENT NEWS -->
@@ -156,8 +202,15 @@
           <h2><i class="fa-solid fa-book-bookmark"></i> Research Publications</h2>
         </div>
 
+        <!-- PUBLICATION CATEGORY FILTERS -->
+        <div class="pub-filter-bar">
+          <button class="pub-filter-btn active" data-filter="all">All (3)</button>
+          <button class="pub-filter-btn" data-filter="journal">Journals (Q1)</button>
+          <button class="pub-filter-btn" data-filter="conference">Conferences</button>
+        </div>
+
         <!-- Publication 1 -->
-        <div class="pub-card">
+        <div class="pub-card" data-category="journal">
           <div class="pub-title">
             A federated learning-benchmarking framework for privacy-preserving UAV intrusion detection using adaptive aggregation algorithms
           </div>
@@ -171,7 +224,10 @@
             <span class="badge badge-nature"><i class="fa-solid fa-leaf"></i> Nature Portfolio Q1</span>
             <span class="badge badge-primary">First Author</span>
             <a href="https://doi.org/10.1038/s41598-026-50865-9" target="_blank" class="btn btn-sm">
-              <i class="fa-solid fa-link"></i> DOI: 10.1038/s41598-026-50865-9
+              <i class="fa-solid fa-link"></i> DOI Link
+            </a>
+            <a href="https://github.com/msbithi" target="_blank" class="btn btn-sm btn-outline">
+              <i class="fa-brands fa-github"></i> Code Repository
             </a>
             <button class="btn btn-sm bibtex-btn" data-id="p1">
               <i class="fa-solid fa-quote-right"></i> BibTeX
@@ -180,7 +236,7 @@
         </div>
 
         <!-- Publication 2 -->
-        <div class="pub-card">
+        <div class="pub-card" data-category="journal">
           <div class="pub-title">
             Non-IID-robust federated learning framework for maritime radar intrusion detection using dynamic weighting aggregation
           </div>
@@ -194,7 +250,10 @@
             <span class="badge badge-nature"><i class="fa-solid fa-leaf"></i> Nature Portfolio Q1</span>
             <span class="badge badge-primary">First Author</span>
             <a href="https://doi.org/10.1038/s41598-026-48912-4" target="_blank" class="btn btn-sm">
-              <i class="fa-solid fa-link"></i> DOI: 10.1038/s41598-026-48912-4
+              <i class="fa-solid fa-link"></i> DOI Link
+            </a>
+            <a href="https://github.com/msbithi" target="_blank" class="btn btn-sm btn-outline">
+              <i class="fa-brands fa-github"></i> Code Repository
             </a>
             <button class="btn btn-sm bibtex-btn" data-id="p2">
               <i class="fa-solid fa-quote-right"></i> BibTeX
@@ -203,7 +262,7 @@
         </div>
 
         <!-- Publication 3 -->
-        <div class="pub-card">
+        <div class="pub-card" data-category="conference">
           <div class="pub-title">
             Ensemble Machine Learning Approach for DDoS Detection in Software-Defined Networking using RFE Feature Selection
           </div>
@@ -260,6 +319,40 @@
               <span class="badge badge-primary">TFF</span>
               <span class="badge badge-primary">Non-IID Aggregation</span>
               <span class="badge badge-primary">Python</span>
+            </div>
+          </div>
+        </div>
+      <!-- SECTION: HONORS & AWARDS -->
+      <section id="awards" class="content-section">
+        <div class="section-header">
+          <h2><i class="fa-solid fa-trophy"></i> Honors & Academic Awards</h2>
+        </div>
+
+        <div class="awards-grid">
+          <div class="award-card">
+            <div class="award-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="award-content">
+              <div class="award-title">Champion &ndash; Best Poster Presentation Award</div>
+              <div class="award-meta">CSE Fest 2024 &bull; Prime University</div>
+              <p class="award-desc">Awarded 1st Place Champion for presenting research on privacy-preserving machine learning and intrusion detection systems.</p>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="award-content">
+              <div class="award-title">Undergraduate Merit Scholarship</div>
+              <div class="award-meta">Prime University &bull; 2023 &ndash; 2024</div>
+              <p class="award-desc">Received consecutive semester merit tuition scholarships for outstanding academic standing (Final CGPA: 3.83 / 4.00).</p>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon"><i class="fa-solid fa-newspaper"></i></div>
+            <div class="award-content">
+              <div class="award-title">Double Q1 First-Author Journal Recognition</div>
+              <div class="award-meta">Scientific Reports &bull; Nature Portfolio (2026)</div>
+              <p class="award-desc">Achieved two consecutive first-author Q1 journal publications in Nature Portfolio for federated intrusion detection frameworks.</p>
             </div>
           </div>
         </div>

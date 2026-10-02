@@ -696,3 +696,206 @@ body {
     display: none;
   }
 }
+
+/* ==========================================================================
+   NEW ENHANCED UI & ACADEMIC FEATURE STYLES
+   ========================================================================== */
+
+/* 1. Contact Item with Copy Icon Button */
+.contact-copy-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-copy-icon {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.btn-copy-icon:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+/* 2. Quick Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--bg-card));
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px 12px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 51, 102, 0.08);
+}
+
+.stat-number {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* 3. Core Research Vision Directions Grid */
+.research-directions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.research-dir-card {
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 16px;
+  transition: var(--transition);
+}
+
+.research-dir-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.research-dir-icon {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+
+.research-dir-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.research-dir-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+}
+
+/* 4. Publication Filter Bar & Outline Buttons */
+.pub-filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.pub-filter-btn {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: var(--bg-card);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pub-filter-btn:hover, .pub-filter-btn.active {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* 5. Honors & Awards Grid */
+.awards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.award-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  transition: var(--transition);
+}
+
+.award-card:hover {
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.award-icon {
+  font-size: 1.6rem;
+  color: var(--color-accent);
+  background: var(--color-primary-light);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.award-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.award-meta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  margin: 3px 0 6px 0;
+}
+
+.award-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
