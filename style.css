@@ -566,19 +566,7 @@ body {
   box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.2);
 }
 
-/* Embedded LaTeX CV Viewer Tab */
-.cv-viewer-container {
-  display: none;
-  background: var(--bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
-  padding: 40px;
-  box-shadow: var(--shadow-card);
-}
 
-.cv-viewer-container.active {
-  display: block;
-}
 
 /* Modal Popup for PDF / BibTeX */
 .modal-overlay {
