@@ -23,7 +23,7 @@
         <i class="fa-solid fa-shield-halved"></i> MS <span>BITHI</span>
       </a>
 
-      <ul class="nav-menu">
+      <ul class="nav-menu" id="nav-menu">
         <li><a href="#about" class="nav-link active" data-tab="about">About</a></li>
         <li><a href="#education" class="nav-link" data-tab="education">Education</a></li>
         <li><a href="#publications" class="nav-link" data-tab="publications">Publications</a></li>
@@ -34,11 +34,14 @@
       </ul>
 
       <div class="nav-actions">
-        <a href="MS-Bithi-CV.pdf" download="MS_BITHI_CV.pdf" class="btn btn-primary">
+        <a href="MS-Bithi-CV.pdf" download="MS_BITHI_CV.pdf" class="btn btn-primary desktop-cv-btn">
           <i class="fa-solid fa-file-arrow-down"></i> Download CV (PDF)
         </a>
         <button id="theme-toggle" class="btn btn-sm" title="Toggle Dark/Light Mode">
           🌙 Dark Mode
+        </button>
+        <button id="mobile-menu-toggle" class="btn btn-sm mobile-hamburger" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
@@ -633,6 +636,11 @@
 
   <!-- TOAST MESSAGE -->
   <div class="toast-msg" id="toast">BibTeX Copied to Clipboard!</div>
+
+  <!-- FLOATING MOBILE CV DOWNLOAD BUTTON -->
+  <a href="MS-Bithi-CV.pdf" download="MS_BITHI_CV.pdf" class="mobile-floating-cv-btn" id="mobile-floating-cv">
+    <i class="fa-solid fa-file-arrow-down"></i> Download CV (PDF)
+  </a>
 
   <!-- SCRIPT -->
   <script src="script.js"></script>

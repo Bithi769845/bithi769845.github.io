@@ -49,11 +49,39 @@ document.addEventListener('DOMContentLoaded', () => {
 }`
   };
 
-  // 1. Navigation Active Scroll handling
+  // Mobile Hamburger Toggle
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (mobileMenuToggle && navMenu) {
+    mobileMenuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      const icon = mobileMenuToggle.querySelector('i');
+      if (icon) {
+        if (navMenu.classList.contains('open')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        } else {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      }
+    });
+  }
+
+  // 1. Navigation Active Scroll handling & Mobile Menu Close
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       navLinks.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
+      if (navMenu && navMenu.classList.contains('open')) {
+        navMenu.classList.remove('open');
+        const icon = mobileMenuToggle?.querySelector('i');
+        if (icon) {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      }
     });
   });
 

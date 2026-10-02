@@ -647,7 +647,16 @@ body {
   opacity: 1;
 }
 
-/* Footer */
+/* Mobile Floating CV Download Button */
+.mobile-floating-cv-btn {
+  display: none;
+}
+
+.mobile-hamburger {
+  display: none;
+}
+
+/* Footer Padding Adjust */
 .footer {
   text-align: center;
   padding: 30px 20px;
@@ -659,14 +668,14 @@ body {
 
 /* Print CSS */
 @media print {
-
   .navbar,
   .sidebar,
   .news-feed,
   .modal-overlay,
   .toast-msg,
   .footer,
-  .nav-actions {
+  .nav-actions,
+  .mobile-floating-cv-btn {
     display: none !important;
   }
 
@@ -676,27 +685,134 @@ body {
     margin: 0 !important;
     padding: 0 !important;
   }
-
-  .cv-viewer-container {
-    display: block !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-  }
 }
 
-/* Responsive Breakdown */
+/* Responsive Breakdown & Mobile Rules */
 @media (max-width: 900px) {
   .wrapper {
     grid-template-columns: 1fr;
+    margin: 16px auto;
+    padding: 0 16px;
+    gap: 20px;
   }
 
   .sidebar {
     position: static;
+    padding: 20px 16px;
+  }
+
+  .profile-avatar-container {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 12px;
+  }
+
+  /* Hamburger Menu Toggle */
+  .mobile-hamburger {
+    display: inline-flex;
+  }
+
+  .desktop-cv-btn {
+    display: none !important;
   }
 
   .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    padding: 16px 20px;
+    gap: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     display: none;
+  }
+
+  .nav-menu.open {
+    display: flex !important;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Content Section Mobile Adjustments */
+  .content-section {
+    padding: 20px 16px;
+  }
+
+  /* Floating Bottom CV Button for Mobile */
+  .mobile-floating-cv-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: fixed;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 86%;
+    max-width: 320px;
+    padding: 12px 20px;
+    background: var(--color-primary);
+    color: #ffffff !important;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.35);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .mobile-floating-cv-btn:hover {
+    background: var(--color-primary-hover);
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 51, 102, 0.45);
+  }
+
+  .footer {
+    padding-bottom: 80px; /* Space for floating mobile button */
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 12px 8px;
+  }
+
+  .stat-number {
+    font-size: 1.35rem !important;
+  }
+
+  .stat-label {
+    font-size: 0.75rem !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .research-directions-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pub-badges {
+    gap: 6px;
+  }
+
+  .pub-badges .btn-sm {
+    width: 100%;
+    justify-content: center;
   }
 }
 
